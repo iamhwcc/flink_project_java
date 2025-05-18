@@ -1,4 +1,4 @@
-package DataStream.codes;
+package com.DataStream.codes;
 
 import DataStream.mySource.MySourceFunction;
 import org.apache.flink.api.common.functions.FlatMapFunction;

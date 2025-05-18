@@ -1,4 +1,4 @@
-package collector.flink_cdc.Constants;
+package com.collector.flink_cdc.Constants;
 
 /**
  * @author stalwarthuang

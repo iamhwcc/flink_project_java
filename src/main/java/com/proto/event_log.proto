@@ -1,0 +1,15 @@
+syntax = "proto3";
+package com;
+option java_package = "com.DataStream.protoPojo";
+option java_outer_classname = "EventLogProto"; // 生成的Java类名
+option java_multiple_files = true; // 编译后生成多个Message类
+
+message EventLog {
+  string request_id = 1;
+
+  uint64 timestamp = 2;
+
+  string event_id = 50;
+  string event_name = 53;
+
+}

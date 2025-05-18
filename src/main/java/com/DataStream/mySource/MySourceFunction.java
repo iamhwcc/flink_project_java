@@ -1,4 +1,4 @@
-package DataStream.mySource;
+package com.DataStream.mySource;
 
 import org.apache.flink.streaming.api.functions.source.ParallelSourceFunction;
 

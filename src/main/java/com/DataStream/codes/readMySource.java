@@ -1,9 +1,8 @@
-package DataStream.codes;
+package com.DataStream.codes;
 
 import DataStream.mySource.MySourceFunction;
 import org.apache.flink.streaming.api.datastream.DataStreamSource;
 import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
-import org.apache.flink.table.api.bridge.java.StreamTableEnvironment;
 
 /**
  * @author stalwarthuang

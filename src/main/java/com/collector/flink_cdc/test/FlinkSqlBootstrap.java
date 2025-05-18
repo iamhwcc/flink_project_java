@@ -1,4 +1,4 @@
-package collector.flink_cdc.test;
+package com.collector.flink_cdc.test;
 
 import collector.flinkSQL.UDFRegister;
 import collector.flink_cdc.utils.SqlUtils;
@@ -25,8 +25,8 @@ public class FlinkSqlBootstrap {
         env.enableCheckpointing(3000); // Flink CDC 2.0 必须开检查点才能采集到 Change Data
 
 
-        List<String> ddlSqls = SqlUtils.extractDDLSqls(DDL_PATH_PREFIX + "collector/flink_cdc/test/ddl");
-        List<String> etlSqls = SqlUtils.extractETLSqls(DDL_PATH_PREFIX + "collector/flink_cdc/test/etl");
+        List<String> ddlSqls = SqlUtils.extractDDLSqls(DDL_PATH_PREFIX + "com/collector/flink_cdc/test/ddl");
+        List<String> etlSqls = SqlUtils.extractETLSqls(DDL_PATH_PREFIX + "com/collector/flink_cdc/test/etl");
 
         for (String ddlSql : ddlSqls) {
 //            System.out.println(ddlSql);

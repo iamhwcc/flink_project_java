@@ -1,4 +1,4 @@
-package collector.flink_cdc.utils;
+package com.collector.flink_cdc.utils;
 
 import java.io.File;
 import java.io.IOException;

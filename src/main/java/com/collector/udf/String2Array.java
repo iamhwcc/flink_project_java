@@ -1,4 +1,4 @@
-package collector.udf;
+package com.collector.udf;
 
 import org.apache.flink.table.functions.ScalarFunction;
 

@@ -1,4 +1,4 @@
-package collector.flinkSQL;
+package com.collector.flinkSQL;
 
 import collector.udf.Arr2Tables;
 import collector.udf.SplitFunction;
