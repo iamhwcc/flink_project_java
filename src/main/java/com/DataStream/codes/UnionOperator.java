@@ -1,9 +1,9 @@
 package com.DataStream.codes;
 
-import DataStream.mySource.MySourceFunction_1;
-import DataStream.mySource.MySourceFunction_2;
-import DataStream.mySource.MySourceFunction_3;
-import DataStream.pojo.InputModel;
+import com.DataStream.mySource.MySourceFunction_1;
+import com.DataStream.mySource.MySourceFunction_2;
+import com.DataStream.mySource.MySourceFunction_3;
+import com.DataStream.pojo.InputModel;
 import org.apache.flink.configuration.Configuration;
 import org.apache.flink.streaming.api.datastream.DataStream;
 import org.apache.flink.streaming.api.datastream.DataStreamSource;

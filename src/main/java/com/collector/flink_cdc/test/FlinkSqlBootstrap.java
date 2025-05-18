@@ -1,14 +1,14 @@
 package com.collector.flink_cdc.test;
 
-import collector.flinkSQL.UDFRegister;
-import collector.flink_cdc.utils.SqlUtils;
+import com.collector.flinkSQL.UDFRegister;
+import com.collector.flink_cdc.utils.SqlUtils;
 import org.apache.flink.configuration.Configuration;
 import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
 import org.apache.flink.table.api.bridge.java.StreamTableEnvironment;
 
 import java.util.List;
 
-import static collector.flink_cdc.Constants.FileConstants.DDL_PATH_PREFIX;
+import static com.collector.flink_cdc.Constants.FileConstants.DDL_PATH_PREFIX;
 
 /**
  * @author stalwarthuang

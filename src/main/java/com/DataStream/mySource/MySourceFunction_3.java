@@ -1,6 +1,6 @@
 package com.DataStream.mySource;
 
-import DataStream.pojo.InputModel;
+import com.DataStream.pojo.InputModel;
 import org.apache.flink.streaming.api.functions.source.ParallelSourceFunction;
 
 import java.util.ArrayList;

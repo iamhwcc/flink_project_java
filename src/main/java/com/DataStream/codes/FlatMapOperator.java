@@ -1,6 +1,6 @@
 package com.DataStream.codes;
 
-import DataStream.mySource.MySourceFunction;
+import com.DataStream.mySource.MySourceFunction;
 import org.apache.flink.api.common.functions.FlatMapFunction;
 import org.apache.flink.streaming.api.datastream.DataStreamSource;
 import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;

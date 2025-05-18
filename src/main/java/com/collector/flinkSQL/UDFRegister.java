@@ -1,8 +1,8 @@
 package com.collector.flinkSQL;
 
-import collector.udf.Arr2Tables;
-import collector.udf.SplitFunction;
-import collector.udf.String2Array;
+import com.collector.udf.Arr2Tables;
+import com.collector.udf.SplitFunction;
+import com.collector.udf.String2Array;
 import org.apache.flink.table.api.bridge.java.StreamTableEnvironment;
 
 /**
