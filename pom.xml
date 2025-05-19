@@ -152,12 +152,7 @@
                 <executions>
                     <execution>
                         <goals>
-                            <goal>
-                                compile
-                            </goal>
-                            <goal>
-                                compile-custom
-                            </goal>
+                            <goal>compile</goal>
                         </goals>
                     </execution>
                 </executions>

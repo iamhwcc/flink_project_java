@@ -17,9 +17,13 @@ public class MySourceFunction implements ParallelSourceFunction<String> {
     public void run(SourceContext<String> ctx) throws Exception {
         int i = 0;
         while (this.is_running) {
-            ctx.collect("word_" + i);
+            if(i % 2 == 0) {
+                ctx.collect("xxx_" + i + ".hwc_1");
+            } else {
+                ctx.collect("yyy_" + i);
+            }
             i++;
-            Thread.sleep(2000);
+            Thread.sleep(1000);
         }
     }
 
