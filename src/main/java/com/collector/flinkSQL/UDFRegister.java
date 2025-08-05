@@ -1,6 +1,7 @@
 package com.collector.flinkSQL;
 
 import com.collector.udf.Arr2Tables;
+import com.collector.udf.JsonArray2StringArray;
 import com.collector.udf.SplitFunction;
 import com.collector.udf.String2Array;
 import org.apache.flink.table.api.bridge.java.StreamTableEnvironment;
@@ -20,5 +21,6 @@ public class UDFRegister {
         tableEnv.createTemporaryFunction("String2Array", String2Array.class);
         tableEnv.createTemporaryFunction("Arr2Tables", Arr2Tables.class);
         tableEnv.createTemporaryFunction("SplitFunction", SplitFunction.class);
+        tableEnv.createTemporaryFunction("JsonArray2StringArray", JsonArray2StringArray.class);
     }
 }

@@ -7,5 +7,5 @@ package com.collector.flink_cdc.Constants;
  */
 public class FileConstants {
 
-    public static final String DDL_PATH_PREFIX = "/Users/hwc/Documents/Flink Project/flink_project_java/src/main/java/";
+    public static final String DDL_PATH_PREFIX = "/Users/stalwart/Documents/java_project/flink_project_java/src/main/java";
 }

@@ -18,9 +18,7 @@ public class MySourceFunction implements ParallelSourceFunction<String> {
         int i = 0;
         while (this.is_running) {
             if(i % 2 == 0) {
-                ctx.collect("xxx_" + i + ".hwc_1");
-            } else {
-                ctx.collect("yyy_" + i);
+                ctx.collect("[\"table1\", \"table2\", \"table3\"]");
             }
             i++;
             Thread.sleep(1000);

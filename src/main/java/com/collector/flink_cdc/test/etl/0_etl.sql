@@ -1,24 +1,21 @@
-CREATE TEMPORARY VIEW result_view (
-    id,
-    qualified_name,
-    task_id,
-    status,
-    owner,
-    platform,
-    props,
-    cur_run_time,
-    create_at,
-    table_lineage
-) as
+CREATE TEMPORARY VIEW result_view as
 select
-    id,
-    qualified_name,
-    task_id,
-    status,
-    owner,
-    platform,
-    props,
-    cur_run_time,
-    create_at,
-    table_lineage
-from t_us_task;
+    id
+    , task_id
+    , src_table_name
+from
+(
+    select
+        id,
+        task_id,
+        src_table_name
+    from
+    (
+        select
+            id,
+            task_id,
+            JsonArray2StringArray(json_query(properties, '$.srcTableNames')) as src_table_names
+        from t_us_task
+    )
+    cross join unnest(src_table_names) t(src_table_name)
+)

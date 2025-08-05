@@ -22,11 +22,11 @@ public class FlinkSqlBootstrap {
         StreamExecutionEnvironment env = StreamExecutionEnvironment.createLocalEnvironmentWithWebUI(configuration);
         StreamTableEnvironment tableEnv = StreamTableEnvironment.create(env);
         UDFRegister.setUpUDF(tableEnv);
-        env.enableCheckpointing(3000); // Flink CDC 2.0 必须开检查点才能采集到 Change Data
+        env.enableCheckpointing(1000); // Flink CDC 2.0 必须开检查点才能采集到 Change Data
 
 
-        List<String> ddlSqls = SqlUtils.extractDDLSqls(DDL_PATH_PREFIX + "com/collector/flink_cdc/test/ddl");
-        List<String> etlSqls = SqlUtils.extractETLSqls(DDL_PATH_PREFIX + "com/collector/flink_cdc/test/etl");
+        List<String> ddlSqls = SqlUtils.extractDDLSqls(DDL_PATH_PREFIX + "/com/collector/flink_cdc/test/ddl");
+        List<String> etlSqls = SqlUtils.extractETLSqls(DDL_PATH_PREFIX + "/com/collector/flink_cdc/test/etl");
 
         for (String ddlSql : ddlSqls) {
 //            System.out.println(ddlSql);

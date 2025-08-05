@@ -16,6 +16,7 @@ public class FlinkSQLTest {
     public static void main(String[] args) throws Exception {
         StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
         StreamTableEnvironment tableEnv = StreamTableEnvironment.create(env);
+        UDFRegister.setUpUDF(tableEnv);
 
         DataStreamSource<String> source = env.addSource(new MySourceFunction()).setParallelism(1);
 
@@ -24,17 +25,10 @@ public class FlinkSQLTest {
                 .build());
 
         tableEnv.executeSql("""
-                        select 
-                            f0,
-                            if(arr1 is null, concat('.', arr0), f0) as src_table
-                        from 
-                        (
-                            select
-                                f0,
-                                SPLIT_INDEX(f0, '.', 0) as arr0,
-                                SPLIT_INDEX(f0, '.', 1) as arr1
+                        select
+                                src
                             from table1
-                        )
+                            cross join unnest(JsonArray2StringArray(f0)) t(src)
                 """).print();
 
         env.execute();
