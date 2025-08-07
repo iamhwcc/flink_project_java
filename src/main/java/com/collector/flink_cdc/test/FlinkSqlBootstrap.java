@@ -29,13 +29,11 @@ public class FlinkSqlBootstrap {
         List<String> etlSqls = SqlUtils.extractETLSqls(DDL_PATH_PREFIX + "/com/collector/flink_cdc/test/etl");
 
         for (String ddlSql : ddlSqls) {
-//            System.out.println(ddlSql);
             System.out.println("****************************************************************");
             tableEnv.executeSql(ddlSql);
         }
 
         for (String etlSql : etlSqls) {
-//            System.out.println(etlSql);
             System.out.println("****************************************************************");
             tableEnv.executeSql(etlSql);
         }
